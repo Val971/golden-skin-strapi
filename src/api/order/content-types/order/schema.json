@@ -4,7 +4,8 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "order"
+    "displayName": "order",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,12 +14,6 @@
   "attributes": {
     "userId": {
       "type": "string"
-    },
-    "products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "inversedBy": "orders"
     },
     "totalAmount": {
       "type": "decimal"
@@ -37,6 +32,12 @@
     },
     "name": {
       "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "orders"
     }
   }
 }

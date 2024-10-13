@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -30,14 +31,15 @@
       "type": "decimal"
     },
     "images": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "sizes": {
       "type": "relation",
@@ -49,7 +51,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::order.order",
-      "mappedBy": "products"
+      "inversedBy": "products"
     }
   }
 }

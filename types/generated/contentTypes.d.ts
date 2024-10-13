@@ -520,19 +520,20 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     singularName: 'order';
     pluralName: 'orders';
     displayName: 'order';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     userId: Schema.Attribute.String;
-    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     totalAmount: Schema.Attribute.Decimal;
     date: Schema.Attribute.Date;
     phone: Schema.Attribute.String;
     email: Schema.Attribute.String;
     address: Schema.Attribute.String;
     name: Schema.Attribute.String;
+    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -551,6 +552,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     singularName: 'product';
     pluralName: 'products';
     displayName: 'product';
+    description: '';
   };
   options: {
     draftAndPublish: true;
