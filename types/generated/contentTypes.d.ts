@@ -499,7 +499,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   attributes: {
     name: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images'>;
+    images: Schema.Attribute.Media<'images'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
