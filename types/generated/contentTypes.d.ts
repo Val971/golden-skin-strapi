@@ -499,7 +499,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   attributes: {
     name: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -594,7 +594,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     state: Schema.Attribute.String;
     price: Schema.Attribute.Decimal;
     discountPrice: Schema.Attribute.Decimal;
-    images: Schema.Attribute.Media<'images'> & Schema.Attribute.Private;
+    images: Schema.Attribute.Media<'images'>;
     sizes: Schema.Attribute.Relation<'manyToMany', 'api::size.size'>;
     orders: Schema.Attribute.Relation<'manyToMany', 'api::order.order'>;
     createdAt: Schema.Attribute.DateTime;

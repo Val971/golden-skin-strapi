@@ -9,7 +9,7 @@ export interface SectionSection extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images'>;
     button: Schema.Attribute.Component<'button.button', false>;
   };
 }
@@ -23,7 +23,7 @@ export interface HeroHero extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images'>;
     button: Schema.Attribute.Component<'button.button', false>;
   };
 }
