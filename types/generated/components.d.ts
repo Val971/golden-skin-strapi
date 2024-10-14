@@ -4,11 +4,12 @@ export interface SectionSection extends Struct.ComponentSchema {
   collectionName: 'components_section_sections';
   info: {
     displayName: 'section';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Private;
     button: Schema.Attribute.Component<'button.button', false>;
   };
 }
@@ -22,7 +23,7 @@ export interface HeroHero extends Struct.ComponentSchema {
   attributes: {
     title: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Private;
     button: Schema.Attribute.Component<'button.button', false>;
   };
 }

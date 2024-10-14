@@ -1,7 +1,8 @@
 {
   "collectionName": "components_section_sections",
   "info": {
-    "displayName": "section"
+    "displayName": "section",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -12,14 +13,13 @@
       "type": "text"
     },
     "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "private": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "button": {
       "type": "component",

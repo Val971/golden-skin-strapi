@@ -491,6 +491,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     singularName: 'category';
     pluralName: 'categories';
     displayName: 'category';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -498,7 +499,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   attributes: {
     name: Schema.Attribute.String;
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Private;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -520,6 +521,7 @@ export interface ApiHomePageHomePage extends Struct.CollectionTypeSchema {
     singularName: 'home-page';
     pluralName: 'home-pages';
     displayName: 'homePage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -592,7 +594,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     state: Schema.Attribute.String;
     price: Schema.Attribute.Decimal;
     discountPrice: Schema.Attribute.Decimal;
-    images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    images: Schema.Attribute.Media<'images'> & Schema.Attribute.Private;
     sizes: Schema.Attribute.Relation<'manyToMany', 'api::size.size'>;
     orders: Schema.Attribute.Relation<'manyToMany', 'api::order.order'>;
     createdAt: Schema.Attribute.DateTime;
