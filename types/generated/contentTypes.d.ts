@@ -564,6 +564,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     address: Schema.Attribute.String;
     name: Schema.Attribute.String;
     products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
+    paymentId: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
